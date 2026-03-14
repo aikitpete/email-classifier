@@ -1,8 +1,17 @@
-An email classifier that works with Gmail's MBOX format.
+# email-classifier
 
-It outputs a list of sender emails ranked by the number of emails they sent.
+A Python command-line tool that analyzes Gmail MBOX exports and ranks senders by how many emails they sent.
 
-Usage:
+## What it does
+Given an `.mbox` file, the script:
 
-    python list_senders.py [-h] [--threshold THRESHOLD] [--group-by-email]
-                       mbox_path
+- reads mailbox messages,
+- extracts sender information from the `From:` header,
+- counts sender frequency,
+- filters results by a configurable threshold,
+- optionally groups by extracted email address instead of the raw header line.
+
+## Usage
+```bash
+python main.py path/to/mailbox.mbox --threshold 50 --group-by-email
+```
