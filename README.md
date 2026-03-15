@@ -1,4 +1,4 @@
-# email-classifier
+# mbox-sender-analyzer
 
 A Python command-line tool that analyzes Gmail MBOX exports and ranks senders by how many emails they sent.
 
